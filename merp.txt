@@ -10,3 +10,15 @@ knock knock!
 Doris!
 "doris who?"
 Doris locked. That's why I'm knocking!
+
+merp merp or meep meep?
+That is the question
+
+@echo off
+:matrix
+set /a var = %random% %%99
+color %var%
+echo %random%%random%%random%
+goto matrix
+
+Save that as a .bat and run it. It amkes pretty colors =)
