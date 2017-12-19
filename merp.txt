@@ -1,12 +1,10 @@
-I once met a man named harold
-He shot a duck of mallard
-All the next day
-He prepared it to stay
-A full stomach and nothing stalward
-
-
-knock knock!
-"who's there?"
-Doris!
-"doris who?"
-Doris locked. That's why I'm knocking!
+def crab():
+    #Making Crab
+    print(" /\\   @ @")
+    print("( /   | |    ()")
+    print(" \\  __| |__  / ")
+    print('  -/   "   \\-')
+    print(" /-|       |-\\")
+    print("/ /-\     /-\ \\")
+    print(" / /-`---'-\ \\")
+    print("  /         \\")
