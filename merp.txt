@@ -1,10 +1,18 @@
-def crab():
-    #Making Crab
-    print(" /\\   @ @")
-    print("( /   | |    ()")
-    print(" \\  __| |__  / ")
-    print('  -/   "   \\-')
-    print(" /-|       |-\\")
-    print("/ /-\     /-\ \\")
-    print(" / /-`---'-\ \\")
-    print("  /         \\")
+import tkinter as tk
+
+root = tk.Tk()
+
+def attack():
+    print("attack")
+    button = tk.Button(root, text='stop', width=25, command=lambda: attack())
+    #This command does nothing as I did not pack it
+        #Cannot overwrite the main button from here
+
+button = tk.Button(root, text='Attack', width=25, command=lambda: attack())
+#Note that without the lambda: in the command line it will do nothing
+
+#Don't forget to pack!
+button.pack()
+
+#Run the system
+root.mainloop()
