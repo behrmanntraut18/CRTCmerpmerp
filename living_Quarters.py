@@ -48,12 +48,15 @@ while True:
 
 
 
+import tkinter as tk
 
+root = tk.Tk()
 
 print("You encounter a giant fluffy crab")
 print("It seems angry for some reason")
 print("How will you defend yourself?")
 def crab():
+    """
     #Making Crab
     print(" /\\   @ @")
     print("( /   | |    ()")
@@ -63,6 +66,10 @@ def crab():
     print("/ /-\     /-\ \\")
     print(" / /-`---'-\ \\")
     print("  /         \\")
+    """
+    crabby = tk.Photoimage(file="crab.bmp")
+    label = Label(root, image=crabby)
+    label.pack(side=Top) #May need quotes, may need to be lowercase
 #default for the health of the crab
 crabhealth = ["#", "#", "#",]
 def health():
@@ -82,9 +89,7 @@ health()
 crab()
 phealth()
 
-import tkinter as tk
 
-root = tk.Tk()
 
 
 
@@ -95,7 +100,6 @@ def attack():
         end()  
     else:
         health()
-        crab()
 def end():
     print("Your swift abilities have caused the crab to faint, well done")
     root.destroy()
@@ -105,11 +109,9 @@ def end():
 def talk():
     print("The crab does not seem to understand you and clacks its claws viciously")
     health()
-    crab()
 def run():
     print("You try to run away but the crab prevents you with some form of hypnotics")
     health()
-    crab()
     
 button = tk.Button(root, text='Attack', width=25, command=lambda: attack())
 button2 = tk.Button(root, text='Talk', width=25, command=lambda: talk())
@@ -118,8 +120,8 @@ button3 = tk.Button(root, text='Run', width=25, command=lambda: run())
 
 
 #Don't forget to pack!
-button.pack()
-button2.pack()
-button3.pack()
+button.pack(fill=X, side="left") #These may need to be not in quotes. Do not yet know
+button2.pack(fill=X, side="left")
+button3.pack(fill=X, side="left")
 #Run the system
 root.mainloop()
